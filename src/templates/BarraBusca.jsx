@@ -46,8 +46,9 @@ export default function BarraBusca(props) {
                             border: '0px',
                             outline: 'none',
                         }}
-                    type="text" 
-                    placeholder="o que você procura?" />
+                        type="text" 
+                        placeholder="o que você procura?"
+                    />
                 </div>
                 <div
                     id='botao-busca'

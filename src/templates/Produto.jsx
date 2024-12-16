@@ -1,7 +1,26 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
+import { ContextoUsuario } from "../App"
+import IdentificarUsuario from "../identificacao"
+import { Provider } from "react"
 
 export default function Produto(props){
-    const [quantidade, setQuantidade] = useState(1);
+
+    const [quantidade, setQuantidade] = useState(1)
+    const [comprar, setComprar] = useState(1)
+    const {usuario, setUsuario} = useContext(ContextoUsuario)
+
+    function adicionarProdCarrinho(produto){
+        if(!usuario.logado)
+            return (
+                <ContextoUsuario.Provider value={{ usuario, setUsuario }}>
+                  <IdentificarUsuario />
+                </ContextoUsuario.Provider>
+              )
+        else{
+            //adicionar as informações ao carrinho, pois o usuário está logado
+        }
+    }
+
     return(
         <div
             style={{
@@ -78,8 +97,8 @@ export default function Produto(props){
                         border: '0px',
                         outline: 'none',
                     }}
-                    type="number" 
-                    value={quantidade} 
+                    type="number"
+                    value={quantidade}
                     onChange={(e) => setQuantidade(e.target.value)} 
                     step={1}
                     min={1}
@@ -87,6 +106,9 @@ export default function Produto(props){
             </div>
             <div id='botao-comprar'>
                 <button
+                    onClick={ ()=> {
+                        adicionarProdCarrinho(props.produto)
+                    }}
                     style={{
                         backgroundColor: 'rgb(255,60,60)',
                         color: 'white',
