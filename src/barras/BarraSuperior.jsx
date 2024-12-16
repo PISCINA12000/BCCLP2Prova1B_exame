@@ -1,5 +1,5 @@
-import BarraBusca from "../templates/BarraBusca";
-import Carrinho from "../templates/Carrinho";
+import BarraBusca from "../templates/BarraBusca"
+import Carrinho from "../templates/Carrinho"
 
 export default function BarraSuperior(props){
     return(
@@ -7,5 +7,5 @@ export default function BarraSuperior(props){
             <BarraBusca/>
             <Carrinho/>
         </div>
-    );
+    )
 }
