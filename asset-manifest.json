@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/BCCLP2Prova1B_exame/static/css/main.eefc237f.css",
+    "main.js": "/BCCLP2Prova1B_exame/static/js/main.36b39555.js",
+    "static/media/ricardoeletro.png": "/BCCLP2Prova1B_exame/static/media/ricardoeletro.b6832e7dca74d29262a5.png",
+    "index.html": "/BCCLP2Prova1B_exame/index.html",
+    "main.eefc237f.css.map": "/BCCLP2Prova1B_exame/static/css/main.eefc237f.css.map",
+    "main.36b39555.js.map": "/BCCLP2Prova1B_exame/static/js/main.36b39555.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.eefc237f.css",
+    "static/js/main.36b39555.js"
+  ]
+}
